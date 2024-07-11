@@ -1,7 +1,11 @@
 # server/app.py
+import sys
+import os
 
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from flask import Flask
 from flask_migrate import Migrate
+from server.models import db
 
 from models import db
 
